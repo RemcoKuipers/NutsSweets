@@ -1,62 +1,218 @@
-*{
+/* Reset & Box sizing */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #191919;
     color: white;
     font-family: Serif, serif;
     font-size: 16px;
-
 }
 
-h1{
-    font-family: 'bakerie_smoothnormal_regular', sans-serif;
-    color: #FE8182;
-    text-shadow: 2px 2px 1px rgba(65,122,164,0.5);
-}
-
-header{
+/* Header */
+header {
     background-color: #015087;
-
     text-align: center;
     position: relative;
-
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
-.star{
-   width: 30px;
+
+h1 {
+    font-family: 'bakerie_smoothnormal_regular', sans-serif;
+    font-size: 200px;
+    color: #FE8182;
+    text-shadow: 12px 10px 5px rgba(65,122,164,0.5);
+}
+
+/* Star image */
+.star {
+    width: 120px;
     height: auto;
     position: absolute;
-    top: 20px;
+    top: 215px;
     left: 10%;
     transform: translateX(-50%);
     z-index: 10;
 }
 
-.info{
-    font-size: 8px;
-    font-weight: bold;
-    margin: 30px 20px 20px 20px;
-
+/* Container voor sidebar + main */
+.container {
+    display: flex;
 }
-.sidebar{
-    width: 100px;
-    height: 100vh;
-    position: absolute;
-    padding: 0;
+
+/* Sidebar */
+.sidebar {
+    width: 17.33%;
     background-color: #191919;
-    border: solid 0.2px gray;
+    border: 0.2px solid gray;
     border-radius: 10px;
-    font-size: 5px;
-
+    padding-top: 20px;
+    margin-left: 10px;
 }
-.sidebar ul{
+
+.sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 20px;
+    margin: 0;
 }
-.sidebar a:hover{
+
+.sidebar ul li {
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar ul li.section-title {
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: default;
+    position: relative;
+    margin: 15px 0 8px 0;
+}
+
+.sidebar ul li.section-title::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: gray;
+    margin-top: 5px;
+}
+
+.sidebar ul li.section-title:hover {
+    background-color: transparent;
+    transform: none;
+}
+
+.sidebar ul li a {
+    color: grey;
     text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #191919;
+    transition: transform 0.25s cubic-bezier(.25,.8,.25,1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sidebar ul li a i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+.sidebar ul li a:hover {
+    background-color: #015087;
+    transform: scale(1.08);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Dropdown */
+.sidebar ul li.dropdown {
+    position: relative;
+}
+
+.sidebar ul li .dropdown-content {
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    margin: 5px 0 0 0;
+}
+
+.sidebar ul li .dropdown-content li a {
+    display: block;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: grey;
+    text-decoration: none;
+    background-color: #191919;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar ul li .dropdown-content li a:hover {
+    background-color: #015087;
+    transform: scale(1.05);
+}
+
+.sidebar ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 0 20px 20px 20px;
+}
+
+/* About wrapper flex: info links, profiel rechts */
+.about-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+/* Personal info */
+.personal-information {
+    flex: 2;
+    font-size: 16px;
+}
+
+/* Profile container: foto + contact box */
+.profile-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile {
+    width: 100%;
+    max-width: 500px;
+    border: 0.2px solid gray;
+    border-radius: 10px;
+}
+
+/* Contact box onder de foto */
+.contact-box {
+    border: 0.2px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #191919;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.contact-box a {
+    color: #FE8182;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Info section */
+.info {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+.heart{
+    color: red;
 }
