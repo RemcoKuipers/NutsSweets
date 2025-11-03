@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'bakerie_smoothnormal_regular';
+    src: url('../assets/fonts/bakeriesmooth-regular-webfont.woff2') format('woff2'),
+    url('../assets/fonts/bakeriesmooth-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
