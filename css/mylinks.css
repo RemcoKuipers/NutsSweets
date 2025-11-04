@@ -47,8 +47,8 @@ h1 {
     width: 350px;
     height: auto;
     position: absolute;
-    top: 100px;
-    left: 90%;
+    top: 820px;
+    left: 82%;
     transform: translateX(-50%);
     z-index: 10;
 }
